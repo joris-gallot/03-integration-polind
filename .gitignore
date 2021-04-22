@@ -1,0 +1,9 @@
+node_modules
+dist
+.cache
+
+styles/*.css
+styles/*.css.*
+!styles/main.css
+
+.DS_Store
