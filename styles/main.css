@@ -131,4 +131,115 @@ table {
   border-spacing: 0;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 1.5rem;
+  z-index: 10;
+}
+.navbar .navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: white;
+  width: 100%;
+  z-index: 5;
+}
+.navbar .navbar-container .logo-name {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-container .logo-name span {
+  margin-left: 1rem;
+  font-weight: bold;
+  font-size: 30px;
+}
+.navbar .navbar-container .nav-list-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+.navbar .navbar-container .nav-list-items .nav-list-item {
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar .navbar-container .nav-list-items .nav-list-item:hover {
+  font-weight: bold;
+}
+.navbar .navbar-container .nav-list-items .nav-list-item:first-child {
+  margin-left: 0;
+}
+
+.hero {
+  height: 125vh;
+  background-image: url("../images/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  height: 125vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.85);
+}
+.hero .hero-container {
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.hero .hero-container .centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .hero-container .centered-container h1 {
+  font-size: 92px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.hero .hero-container .centered-container h1 span {
+  color: #ed6950;
+}
+.hero .hero-container .centered-container p {
+  font-size: 18px;
+  margin-top: 1rem;
+  color: #45494b;
+}
+.hero .hero-container .centered-container button {
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 1.5rem;
+  background-color: #ffc74a;
+  color: #b98000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+.hero .hero-container .hero-description {
+  color: white;
+  font-size: 18px;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 /*# sourceMappingURL=main.css.map */
