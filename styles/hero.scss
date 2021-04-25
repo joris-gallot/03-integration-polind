@@ -4,6 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  position: relative;
 
   &::before {
     content: '';
@@ -49,15 +50,6 @@
       }
 
       button {
-        border: none;
-        border-radius: 999px;
-        padding: 1rem 1.5rem;
-        background-color: $secondary;
-        color: $darker-secondary;
-        font-size: 14px;
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
         margin-top: 3rem;
       }
     }
@@ -65,6 +57,212 @@
     .hero-description {
       color: white;
       font-size: 18px;
-     }
+    }
+  }
+
+  .city-slider {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: calc(-435px / 2);
+    z-index: 6;
+    overflow-x: hidden;
+
+    .previous {
+      margin: 0 1rem 0 -5rem;
+      justify-content: flex-start;
+    }
+
+    .next {
+      margin: 0 -5rem 0 1rem;
+      justify-content: flex-end;
+    }
+
+    .city-image {
+      height: 100%;
+      width: 100%;
+      min-width: 360px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .credit {
+        display: none;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(black, .8);
+      }
+
+      &:hover {
+        .arrow-icon {
+          opacity: 1;
+          transition: opacity 300ms ease-in, transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .next {
+          transform: translateX(-270px);
+        }
+
+        .previous {
+          transform: translateX(270px);
+        }
+      }
+
+      .arrow-icon {
+        z-index: 3;
+        max-width: 70px;
+        color: white;
+        opacity: 0;
+      }
+
+      .hover-state {
+        display: none;
+      }
+
+      .normal-state {
+        display: none;
+      }
+    }
+
+    .city-image-active {
+      height: 100%;
+      width: 100%;
+      min-width: 360px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+
+      .arrow-icon {
+        display: none;
+      }
+
+      .credit {
+        z-index: 3;
+        padding: .4rem;
+        border-radius: 2px;
+        font-size: 10px;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        background: rgba(0, 0, 0, .7);
+        color: white;
+
+        a {
+          color: $secondary;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, #040404);
+        transition: opacity 300ms ease-in;
+        opacity: 1;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: black;
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+      }
+
+      &:hover {
+        justify-content: center;
+
+        &::before {
+          opacity: .7;
+        }
+
+        &::after {
+          opacity: 0;
+        }
+
+        .normal-state {
+          display: none;
+        }
+
+        .hover-state {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .hover-state {
+        z-index: 3;
+        transition: opacity 300ms ease-in;
+        display: none;
+        color: white;
+
+        .city-title {
+          font-size: 40px;
+          font-weight: bold;
+          margin-bottom: .3rem;
+        }
+
+        .city-subtitle {
+          font-size: 14px;
+        }
+
+       button {
+         position: absolute;
+         bottom: 3rem;
+       }
+      }
+
+      .normal-state {
+        transition: opacity 300ms ease-in;
+        margin-bottom: 3rem;
+        z-index: 3;
+        display: block;
+
+        .city-description {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          height: 100%;
+
+          .city-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: .3rem;
+          }
+
+          .city-subtitle {
+            font-size: 14px;
+            color: $secondary;
+          }
+        }
+      }
+
+    }
   }
 }

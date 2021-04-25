@@ -163,13 +163,32 @@ table {
   align-items: center;
   justify-content: space-between;
   width: 500px;
+  overflow: visible;
+}
+.navbar .navbar-container .nav-list-items .nav-list-item-search {
+  cursor: pointer;
+  height: 2rem;
 }
 .navbar .navbar-container .nav-list-items .nav-list-item {
   font-size: 18px;
   cursor: pointer;
+  position: relative;
+  height: 2rem;
 }
-.navbar .navbar-container .nav-list-items .nav-list-item:hover {
-  font-weight: bold;
+.navbar .navbar-container .nav-list-items .nav-list-item::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  top: 1.5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffc74a;
+  width: 0;
+  transition: width 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.navbar .navbar-container .nav-list-items .nav-list-item:hover::after {
+  width: 100%;
 }
 .navbar .navbar-container .nav-list-items .nav-list-item:first-child {
   margin-left: 0;
@@ -181,6 +200,7 @@ table {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  position: relative;
 }
 .hero::before {
   content: "";
@@ -222,24 +242,199 @@ table {
   color: #45494b;
 }
 .hero .hero-container .centered-container button {
-  border: none;
-  border-radius: 999px;
-  padding: 1rem 1.5rem;
-  background-color: #ffc74a;
-  color: #b98000;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
   margin-top: 3rem;
 }
 .hero .hero-container .hero-description {
   color: white;
   font-size: 18px;
 }
+.hero .city-slider {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: calc(-435px / 2);
+  z-index: 6;
+  overflow-x: hidden;
+}
+.hero .city-slider .previous {
+  margin: 0 1rem 0 -5rem;
+  justify-content: flex-start;
+}
+.hero .city-slider .next {
+  margin: 0 -5rem 0 1rem;
+  justify-content: flex-end;
+}
+.hero .city-slider .city-image {
+  height: 100%;
+  width: 100%;
+  min-width: 360px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.hero .city-slider .city-image .credit {
+  display: none;
+}
+.hero .city-slider .city-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.hero .city-slider .city-image:hover .arrow-icon {
+  opacity: 1;
+  transition: opacity 300ms ease-in, transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hero .city-slider .city-image:hover .next {
+  transform: translateX(-270px);
+}
+.hero .city-slider .city-image:hover .previous {
+  transform: translateX(270px);
+}
+.hero .city-slider .city-image .arrow-icon {
+  z-index: 3;
+  max-width: 70px;
+  color: white;
+  opacity: 0;
+}
+.hero .city-slider .city-image .hover-state {
+  display: none;
+}
+.hero .city-slider .city-image .normal-state {
+  display: none;
+}
+.hero .city-slider .city-image-active {
+  height: 100%;
+  width: 100%;
+  min-width: 360px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.hero .city-slider .city-image-active .arrow-icon {
+  display: none;
+}
+.hero .city-slider .city-image-active .credit {
+  z-index: 3;
+  padding: 0.4rem;
+  border-radius: 2px;
+  font-size: 10px;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.hero .city-slider .city-image-active .credit a {
+  color: #ffc74a;
+}
+.hero .city-slider .city-image-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, #040404);
+  transition: opacity 300ms ease-in;
+  opacity: 1;
+}
+.hero .city-slider .city-image-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.hero .city-slider .city-image-active:hover {
+  justify-content: center;
+}
+.hero .city-slider .city-image-active:hover::before {
+  opacity: 0.7;
+}
+.hero .city-slider .city-image-active:hover::after {
+  opacity: 0;
+}
+.hero .city-slider .city-image-active:hover .normal-state {
+  display: none;
+}
+.hero .city-slider .city-image-active:hover .hover-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .city-slider .city-image-active .hover-state {
+  z-index: 3;
+  transition: opacity 300ms ease-in;
+  display: none;
+  color: white;
+}
+.hero .city-slider .city-image-active .hover-state .city-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.hero .city-slider .city-image-active .hover-state .city-subtitle {
+  font-size: 14px;
+}
+.hero .city-slider .city-image-active .hover-state button {
+  position: absolute;
+  bottom: 3rem;
+}
+.hero .city-slider .city-image-active .normal-state {
+  transition: opacity 300ms ease-in;
+  margin-bottom: 3rem;
+  z-index: 3;
+  display: block;
+}
+.hero .city-slider .city-image-active .normal-state .city-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.hero .city-slider .city-image-active .normal-state .city-description .city-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.hero .city-slider .city-image-active .normal-state .city-description .city-subtitle {
+  font-size: 14px;
+  color: #ffc74a;
+}
 
 * {
   font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffc74a;
+  color: #b98000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

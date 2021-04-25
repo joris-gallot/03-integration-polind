@@ -6,3 +6,15 @@
 * {
   font-family: 'Montserrat', sans-serif;
 }
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: .8rem 1.5rem;
+  background-color: $secondary;
+  color: $darker-secondary;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
