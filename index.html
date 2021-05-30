@@ -26,7 +26,12 @@
           <span>Polind</span>
         </div>
 
-        <ul class="nav-list-items">
+        <div id="burger-menu" class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul id="nav-list" class="nav-list-items">
           <li class="nav-list-item">Guide</li>
           <li class="nav-list-item">Journey</li>
           <li class="nav-list-item">Hotels</li>
@@ -61,8 +66,11 @@
         <p class="hero-description">Popular places to discover</p>
       </div>
 
-      <div class="city-slider">
-        <div class="city-image previous" style="background-image: url('images/gdansk.jpg')">
+      <div class="city-slider" id="city-slider">
+        <div style="background-image: url('images/gdansk.jpg')">
+          <svg class="arrow-icon next" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004">
+            <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"/>
+          </svg>
           <svg class="arrow-icon previous" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
             <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"/>
           </svg>
@@ -84,7 +92,14 @@
             </div>
           </div>
         </div>
-        <div class="city-image-active" style="background-image: url('images/krakow.jpg')">
+        <div style="background-image: url('images/krakow.jpg')">
+          <svg class="arrow-icon next" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004">
+            <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"/>
+          </svg>
+          <svg class="arrow-icon previous" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+            <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"/>
+          </svg>
+
           <div class="credit">
             Photo by <a href="https://unsplash.com/@mohammed_ajwad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mohammed Ajwad</a> on <a href="https://unsplash.com/s/photos/krak%C3%B3w%2C-poland?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           </div>
@@ -102,7 +117,14 @@
             </div>
           </div>
         </div>
-        <div class="city-image-active" style="background-image: url('images/sandomierz.jpg')">
+        <div style="background-image: url('images/sandomierz.jpg')">
+          <svg class="arrow-icon next" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004">
+            <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"/>
+          </svg>
+          <svg class="arrow-icon previous" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+            <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"/>
+          </svg>
+
           <div class="credit">
             Photo by <a href="https://unsplash.com/@gliwik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kamil Gliwiński</a> on <a href="https://unsplash.com/s/photos/warsaw%2C-poland?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           </div>
@@ -119,7 +141,14 @@
             </div>
           </div>
         </div>
-        <div class="city-image-active" style="background-image: url('images/warsaw.jpg')">
+        <div style="background-image: url('images/warsaw.jpg')">
+          <svg class="arrow-icon next" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004">
+            <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"/>
+          </svg>
+          <svg class="arrow-icon previous" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+            <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"/>
+          </svg>
+
           <div class="credit">
             Photo by <a href="https://unsplash.com/@garmax?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maksym Harbar</a> on <a href="https://unsplash.com/s/photos/wroc%C5%82aw%2C-poland?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           </div>
@@ -137,9 +166,12 @@
             </div>
           </div>
         </div>
-        <div class="city-image next" style="background-image: url('images/wroclaw.jpg')">
+        <div style="background-image: url('images/wroclaw.jpg')">
           <svg class="arrow-icon next" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004">
             <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"/>
+          </svg>
+          <svg class="arrow-icon previous" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 492">
+            <path d="M464.344 207.418l.768.168H135.888l103.496-103.724c5.068-5.064 7.848-11.924 7.848-19.124 0-7.2-2.78-14.012-7.848-19.088L223.28 49.538c-5.064-5.064-11.812-7.864-19.008-7.864-7.2 0-13.952 2.78-19.016 7.844L7.844 226.914C2.76 231.998-.02 238.77 0 245.974c-.02 7.244 2.76 14.02 7.844 19.096l177.412 177.412c5.064 5.06 11.812 7.844 19.016 7.844 7.196 0 13.944-2.788 19.008-7.844l16.104-16.112c5.068-5.056 7.848-11.808 7.848-19.008 0-7.196-2.78-13.592-7.848-18.652L134.72 284.406h329.992c14.828 0 27.288-12.78 27.288-27.6v-22.788c0-14.82-12.828-26.6-27.656-26.6z"/>
           </svg>
           <div class="credit">
             Photo by <a href="https://unsplash.com/@agnieszkam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Agnieszka Mordaunt</a> on <a href="https://unsplash.com/s/photos/gda%C5%84sk%2C-poland?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -161,6 +193,150 @@
       </div>
     </section>
 
-    <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <section class="search-section">
+      <h2>Where you want to go?</h2>
+
+      <div class="search">
+        <div class="search-input">
+          <input type="text" placeholder="Search place">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512.005 512.005">
+            <path d="M505.749 475.587l-145.6-145.6c28.203-34.837 45.184-79.104 45.184-127.317C405.333 90.926 314.41.003 202.666.003S0 90.925 0 202.669s90.923 202.667 202.667 202.667c48.213 0 92.48-16.981 127.317-45.184l145.6 145.6c4.16 4.16 9.621 6.251 15.083 6.251s10.923-2.091 15.083-6.251c8.341-8.341 8.341-21.824-.001-30.165zM202.667 362.669c-88.235 0-160-71.765-160-160s71.765-160 160-160 160 71.765 160 160-71.766 160-160 160z"/>
+          </svg>
+        </div>
+
+        <div class="filters">
+          <div class="left">
+            <div class="active">Journey</div>
+            <div>Travelers</div>
+            <div>Guide</div>
+          </div>
+
+          <div class="right">
+            <div>Mazury</div>
+            <div>Cracow</div>
+            <div>Zakopane</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results">
+        <div class="city-card">
+          <img src="images/grid-1.png" alt="">
+          <div class="title">
+            Poznan
+          </div>
+          <div class="description">
+            Wielkopolskie
+          </div>
+          <button class="btn">
+            View offers
+          </button>
+        </div>
+        <div class="city-card">
+          <img src="images/grid-2.png" alt="">
+          <div class="title">
+            Warsaw
+          </div>
+          <div class="description">
+            Mazowieckie
+          </div>
+          <button class="btn">
+            View offers
+          </button>
+        </div>
+        <div class="city-card">
+          <img src="images/grid-3.png" alt="">
+          <div class="title">
+            Wroclaw
+          </div>
+          <div class="description">
+            Dolnoslaskie
+          </div>
+          <button class="btn">
+            View offers
+          </button>
+        </div>
+        <div class="city-card">
+          <img src="images/grid-4.png" alt="">
+          <div class="title">
+            Karpacz
+          </div>
+          <div class="description">
+            Dolnoslaskie
+          </div>
+          <button class="btn">
+            View offers
+          </button>
+        </div>
+        <div class="city-card">
+          <img src="images/grid-5.png" alt="">
+          <div class="title">
+            Dolina Olczyska
+          </div>
+          <div class="description">
+            Malopolskie
+          </div>
+          <button class="btn">
+            View offers
+          </button>
+        </div>
+        <div class="city-card">
+          <img src="images/grid-6.png" alt="">
+          <div class="title">
+            Kozy
+          </div>
+          <div class="description">
+            Slaskie
+          </div>
+          <button class="btn">
+            View offers
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore">
+      <h2>Explore city</h2>
+
+      <div class="absolute-text">
+        SAN<br/>DOM<br/>IERZ
+      </div>
+
+      <div class="explore-container">
+        <div class="text">
+          <h3>Sandomierz</h3>
+          <p>
+            Sandomierz is one of the oldest and historically most significant cities in Poland. Archeological finds around the city indicate that humans have inhabited the area since neolithic times. The city came into existence in the early Middle Ages, taking advantage of an excellent location at the junction of Vistula and San rivers, and on the path of important trade routes.
+            <br/><br/>
+            The first known historical mention of the city comes from the early 12th-century, when the chronicler Gallus Anonymus ranked it together with Kraków and Wrocław as one of the main cities of Poland. The testament (ca 1115-1118) of Bolesław III Wrymouth, in which he divided Poland among his sons, designated Sandomierz as the capital of one of the resulting principalities, the Duchy of Sandomierz.
+          </p>
+
+          <button class="btn">Check offers</button>
+        </div>
+        
+        <div class="image">
+          <div class="container-image">
+            <img src="images/explore.png" alt="explore">
+            <div class="offset-border"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h3>Enjoy your journey</h3>
+      <button class="btn">Sign up</button>
+      <p>You can also sign up on our <a href="#">newsletter</a></p>
+    </footer>
+
+    <section class="copyright">
+      <img src="images/symu.png" alt="symu">
+      <p>All right reserved by symu.co</p>
+
+      <div class="icons">
+        Icons used was made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> and <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </div>
+    </section>
+    <script src="index.js"></script>
   </body>
 </html>

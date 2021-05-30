@@ -1,0 +1,25 @@
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 500px;
+  gap: 25px;
+  padding: 0 1rem;
+
+  p {
+    font-size: 24px;
+    font-weight: bold;
+    color: $ternary;
+  }
+
+  .icons {
+    font-size: 15px;
+    color: $ternary;
+
+    a {
+      color: $primary;
+    }
+  }
+}

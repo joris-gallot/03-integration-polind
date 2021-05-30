@@ -1,0 +1,31 @@
+footer {
+  text-align: center;
+  height: 642px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: white;
+  background-image: url("../images/bg-footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem;
+
+  h3 {
+    font-size: 92px;
+    font-weight: bold;
+
+    @media screen and (max-width: 500px) {
+      font-size: 72px;
+    }
+  }
+
+  p {
+    font-size: 18.5px;
+
+    a {
+      color: $secondary;
+    }
+  }
+}
